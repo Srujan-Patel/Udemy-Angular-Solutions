@@ -1,0 +1,26 @@
+
+1. Create a new app: ng new <filename>
+2. To start the server use: ng serve to quit press Ctrl+C
+3. to install bootstrap in nodejs module use: npm install --save bootstrap@version-number
+	specify the path, "node_modules/bootstrap/dist/css/bootstrap.min.css" in the angular.json file
+ 
+Order of Execution:
+main.ts => app.module.ts => app.component.html/css/spec.ts/ts => index.html (main page that loads)
+
+All app related info goes in the app folder
+
+// Components:
+- In angular code is written in the form of components
+- Components allow you to create diffirent functionalities for say header (also things inside the header), sidebar, footer etc. 
+- AppComponent is the root component which is bootstraped 
+- Folder name equal to component name is a good practice
+- Create a typescript file for the component
+- declare a class and its decorator @Component with selector as the tag and the 
+import the decorator from angular
+register the component at the module.js file
+
+
+To do all this automatically using CLI,
+
+open cmd enter ng generate component <name>, it will create the html, css, and the js file, also include it in the app.module.ts
+any component can be nested in any other component after adding it to the app.module.js file, if created by CLI done automatically
