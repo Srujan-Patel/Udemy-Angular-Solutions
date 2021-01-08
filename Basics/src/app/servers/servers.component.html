@@ -4,13 +4,23 @@
 
 <input type="text"
 [(ngModel)]="serverName">
-
 <!--<p>{{serverName}}</p>-->
+<br />
 <button class="btn btn-primary"
 [disabled]='!allowServer'  
 (click)= "onCreateServer()"
 >Add Server</button> 
  
 
-<p>{{'Hello'}} the server id is {{serverId}} with status {{getstatus()}}</p>
-<p>{{serverCreationStatus}}</p>
+<p [ngStyle]= "{backgroundColor: getColor()}"
+   [ngClass]="{online: status==='online'}">
+{{'Hello'}} the server id is {{serverId}} with status {{status}}
+</p>
+<!--<p>{{serverCreationStatus}}</p>-->
+
+<p *ngIf = "serverCreate; else noServer" >Server was created, Server name is {{serverName}}</p>
+<ng-template #noServer>
+<p>No server was created</p>
+</ng-template>
+
+<app-server *ngFor= "let server of servers"></app-server>
