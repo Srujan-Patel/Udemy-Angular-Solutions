@@ -11,6 +11,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { FormsModule } from '@angular/forms';
 import { DropdownDirectiveDirective } from './shared/dropdown-directive.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import {AppRoutingModule} from './app-routing.module';
+import { RecepieStartComponent } from './recepies/recepie-start/recepie-start.component';
+import { RecepieEditComponent } from './recepies/recepie-edit/recepie-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     RecepieItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirectiveDirective
+    DropdownDirectiveDirective,
+    RecepieStartComponent,
+    RecepieEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

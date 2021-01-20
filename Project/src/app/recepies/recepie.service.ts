@@ -30,6 +30,11 @@ getRecepies(){
     return this.recepies.slice();
 }
 
+
+getRecepie(index: number){
+return this.recepies[index];
+}
+
 addIngredientsToShoppingList(ingredients: Ingredient[]){
 this.slService.addIngredients(ingredients);
 }
