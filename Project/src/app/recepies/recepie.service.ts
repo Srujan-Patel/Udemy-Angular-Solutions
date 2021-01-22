@@ -1,4 +1,5 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import {Recepie} from './recepie.model';
@@ -6,7 +7,7 @@ import {Recepie} from './recepie.model';
 @Injectable()
 export class RecepieService{
 
-  recepieSelected=  new EventEmitter<Recepie>();
+  recepieSelected=  new Subject<Recepie>();
 
 private recepies: Recepie[]=[
         new Recepie('A test recepie', 'This is simply a test', 
@@ -34,6 +35,7 @@ getRecepies(){
 getRecepie(index: number){
 return this.recepies[index];
 }
+
 
 addIngredientsToShoppingList(ingredients: Ingredient[]){
 this.slService.addIngredients(ingredients);
