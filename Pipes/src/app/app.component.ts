@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  newDate= new Date(2021, 0, 28);
+
   appStatus=new Promise((resolve, reject)=>{
     setTimeout(()=>{
       resolve('stable')

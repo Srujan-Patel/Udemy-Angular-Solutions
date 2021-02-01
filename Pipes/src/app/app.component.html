@@ -21,14 +21,25 @@
           <strong>{{ server.name | shorten: 15 }}</strong> | 
           {{ server.instanceType | uppercase | reverse }} | 
           {{ server.started | date: 'fullDate' | uppercase }}
-
           
           <!-- Enter parameters after the colon, if there are more than one parameters, seperate them by successive colons -->
 
           <!-- pipes are applpied from left to right side, so first the date pipe goes into the server.started property and to the resultant output the uppercase property is applied, so if you write upperacase first you will get an error -->
 
         </li>
+        <ul class="list-group">
+          <li class="list-group-item">
+            {{newDate | customdate}}
+          </li>
+          <li class="list-group-item">
+            {{newDate | othercustomdate}}
+          </li>
+
+        </ul>
+        
       </ul>
     </div>
   </div>
 </div>
+
+

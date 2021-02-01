@@ -8,6 +8,8 @@ import { ShortenPipe } from './shorten.pipe';
 import { FilterPipe } from './filter.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { SortPipe } from './sort.pipe';
+import { CustomdatePipe } from './customdate.pipe';
+import { OthercustomdatePipe } from './othercustomdate.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SortPipe } from './sort.pipe';
     ShortenPipe,
     FilterPipe,
     ReversePipe,
-    SortPipe
+    SortPipe,
+    CustomdatePipe,
+    OthercustomdatePipe
   ],
   imports: [
     BrowserModule,
