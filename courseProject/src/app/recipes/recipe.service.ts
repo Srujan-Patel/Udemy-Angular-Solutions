@@ -1,3 +1,10 @@
+//Services can be provided into 4 places: AppModulle, AppComponent, Eager-Loaded Module like the core module and lazy loaded module
+//As a rule of thumb always provide a service in the appmodule or use the modern syntax with @Injectable(providedIn:'root')
+//If you provide a service inside a component the same instance is shared between the all files of the component and it child,
+//If you provide it in a eager-loaded module then it has the same effect as available in root
+//If you provide it in the lazy loaded module then service is available only module wise, not recommended, if also provided application wise then it receives a sepearate isntance
+
+
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
