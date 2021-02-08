@@ -1,4 +1,3 @@
-
 1. Create a new app: ng new <filename>
 2. To start the server use: ng serve to quit press Ctrl+C
 3. to install bootstrap in nodejs module use: npm install --save bootstrap@version-number
@@ -59,25 +58,28 @@ Important CLI commands
 Builders:
 - ng lint: to check the linting quality of your projects
 - ng build --prod: to build the file for production (dist folder which can be put at the server to serve the file)
--ng test 
+- ng test 
 
--ng add @angular/material
--ng generate @angular/material: name of the supported schematic name of folder
+- ng add @angular/material
+- ng generate @angular/material: name of the supported schematic name of folder
 
--ng update: tells you all the packages that need to be updated
+- ng update: tells you all the packages that need to be updated
 
--ng deploy: build+deploy on a host, for example @angular/fire allows you to build and deploy on firebase,
+- ng deploy: build+deploy on a host, for example @angular/fire allows you to build and deploy on firebase,
 	npm install -g firebase-tools
 	firebase login
 	for this first ng add @angular/fire in your project
 
 
 Diffrential Loading: Support modern browsers and legacy browsers, you specify all this in browserslist file 
-polyfills: polyfills.ts file and uncomment the commented imports as per the use
+Polyfills: polyfills.ts file and uncomment the commented imports as per the use
 
--To generate a project insisde a progect: ng generate application/library name then use ng serve --project=name, you can also set the defaultproject in angular.json
+- To generate a project insisde a progect: ng generate application/library name then use ng serve --project=name, you can also set the defaultproject in angular.json
 
 Better approach: use ng new projectname --create-application=functionalities
 then generate applications inside using:  ng generate application name
  
-- to create a library use ng generate library name (A library is similar to app however it is not meant to run in a sinlge page app however it holds something which needs to be shared ex Angular Material, we can create our own )
+- To create a library use ng generate library name (A library is similar to app however it is not meant to run in a sinlge page app however it holds something which needs to be shared ex Angular Material, we can create our own )
+
+- ng add @angular/pwa: to add service workers: a mechanism to load the app even if you are offline.
+  npm install -g http-server installs a node server
