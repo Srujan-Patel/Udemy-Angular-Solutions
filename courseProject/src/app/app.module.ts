@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // declarations is a combination of all the ComponentFactoryResolver, directives and custompipes in your project, components declared here can communicate with each other however cannot communicate with the ones declared in other modules, unless the module is imported
@@ -31,6 +32,7 @@ import { CoreModule } from './core.module';
     AppRoutingModule,
     SharedModule,
     CoreModule,
+    BrowserAnimationsModule,
     
   ],
 

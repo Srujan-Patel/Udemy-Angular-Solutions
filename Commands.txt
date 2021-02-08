@@ -24,3 +24,60 @@ To do all this automatically using CLI,
 
 open cmd enter ng generate component <name>, it will create the html, css, and the js file, also include it in the app.module.ts
 any component can be nested in any other component after adding it to the app.module.js file, if created by CLI done automatically
+
+
+To update your projects:
+npm install
+ng update
+npm install -g @angular/cli@latest
+
+
+To see a different configurations of an app use --help
+example: ng new --help
+
+
+Important CLI commands
+- ng new porjectname
+- ng generate: generates the following:
+    app-shell
+    application
+    class
+    component
+    directive
+    enum
+    guard
+    interceptor
+    interface
+    library
+    module
+    pipe
+    resolver
+    service
+    service-worker
+    web-worker
+
+Builders:
+- ng lint: to check the linting quality of your projects
+- ng build --prod: to build the file for production (dist folder which can be put at the server to serve the file)
+-ng test 
+
+-ng add @angular/material
+-ng generate @angular/material: name of the supported schematic name of folder
+
+-ng update: tells you all the packages that need to be updated
+
+-ng deploy: build+deploy on a host, for example @angular/fire allows you to build and deploy on firebase,
+	npm install -g firebase-tools
+	firebase login
+	for this first ng add @angular/fire in your project
+
+
+Diffrential Loading: Support modern browsers and legacy browsers, you specify all this in browserslist file 
+polyfills: polyfills.ts file and uncomment the commented imports as per the use
+
+-To generate a project insisde a progect: ng generate application/library name then use ng serve --project=name, you can also set the defaultproject in angular.json
+
+Better approach: use ng new projectname --create-application=functionalities
+then generate applications inside using:  ng generate application name
+ 
+- to create a library use ng generate library name (A library is similar to app however it is not meant to run in a sinlge page app however it holds something which needs to be shared ex Angular Material, we can create our own )
